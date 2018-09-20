@@ -2,7 +2,7 @@
 <h1>All Players</h1>
 <div>
     {{#each players}}
-    <a href='/games/{{this.id}}'>{{this.name}}</a>
+    <a href='/games/{{../gameId}}/players/{{this._id}}'>{{this.name}}</a>
     {{/each}}
 </div>
 
