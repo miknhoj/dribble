@@ -17,7 +17,9 @@ router.get('/', (req, res) => {
 })
 
 // NEW, RENDER NEW FORM
-
+router.get('/new', (req, res) => {
+    res.render('players/new')
+})
 
 // SHOW, SHOW ONE
 router.get('/:id', (req, res) => {
@@ -33,7 +35,17 @@ router.get('/:id', (req, res) => {
 // EDIT, RENDER EDIT FORM
 
 // CREATE
-
+router.post('/', (req, res) => {
+    const newPlayer = new Player(req.body)
+    Game.findByID(req.params.gameId)
+        .then((game) => {
+            game.players.push(newPlayer)
+            return game.save()
+        })
+        .then((game) => {
+            res.redirect(`/games/${req.params.gameId}/players`)
+        })
+})
 
 // UPDATE
 
