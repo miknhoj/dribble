@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { Game } = require('../db/schema')
+const { Game, Player } = require('../db/schema')
 
 // INDEX , SHOW ALL
 router.get('/', (req, res) => {
@@ -14,6 +14,12 @@ router.get('/', (req, res) => {
 // NEW, RENDER NEW FORM
 
 // SHOW, SHOW ONE
+router.get('/:id', (req, res) => {
+  Game.findById(req.params.id)
+    .then((game) => {
+      res.render('games/show', { game })
+    })
+})
 
 // EDIT, RENDER EDIT FORM
 
