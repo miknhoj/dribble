@@ -24,6 +24,12 @@ router.get('/:id', (req, res) => {
 })
 
 // EDIT, RENDER EDIT FORM
+router.get('/:id/edit', (req, res) => {
+  Game.findById(req.params.id)
+    .then((game) => {
+      res.render('games/edit', {game})
+    })
+})
 
 // CREATE
 router.post('/', (req, res) => {
