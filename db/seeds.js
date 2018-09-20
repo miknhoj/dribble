@@ -20,16 +20,28 @@ const playerOne = new Player({
     stats: [gamestat],
 })
 
-const thursday = new Game({
+const playerTwo = new Player({
+    name: 'Bron',
+    stats: [gamestat],
+})
+
+const gametest1 = new Game({
     date: '9 / 5 / 2018',
     location: 'KFPC',
     gameNumber: 1,
     players: [playerOne]
 })
 
+const gametest2 = new Game({
+    date: '10/ 11 / 2018',
+    location: 'KFPC',
+    gameNumber: 1,
+    players: [playerTwo]
+})
+
 Game.deleteMany()
     .then(() => {
-        return Game.insertMany([thursday])
+        return Game.insertMany([gametest1, gametest2])
     })
     .then(() => {
         console.log('Done Seeding!')
