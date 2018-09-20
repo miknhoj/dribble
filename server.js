@@ -8,6 +8,8 @@ const mongoose = require('mongoose')
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 
+const methodOverride = require('method-override')
+
 var indexRouter = require('./routes/index');
 var gamesRouter = require('./routes/games');
 
@@ -17,6 +19,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.use(methodOverride('_method'))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

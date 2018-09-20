@@ -14,7 +14,7 @@ const PlayerSchema = new Schema ({
 })
 
 const GameSchema = new Schema ({
-    date: Number,
+    date: String,
     location: String,
     gameNumber: Number,
     players: [PlayerSchema]

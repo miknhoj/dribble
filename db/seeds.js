@@ -21,7 +21,7 @@ const playerOne = new Player({
 })
 
 const thursday = new Game({
-    date: 9 / 5 / 2018,
+    date: '9 / 5 / 2018',
     location: 'KFPC',
     gameNumber: 1,
     players: [playerOne]
