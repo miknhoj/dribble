@@ -18,7 +18,13 @@ router.get('/', (req, res) => {
 
 // NEW, RENDER NEW FORM
 router.get('/new', (req, res) => {
-    res.render('players/new')
+    Game.findById(req.params.gameId)
+        .then((game) => {
+            res.render('players/new', {
+                gameId: req.params.gameId,
+                players: game.players
+        })
+    })
 })
 
 // SHOW, SHOW ONE
@@ -37,7 +43,7 @@ router.get('/:id', (req, res) => {
 // CREATE
 router.post('/', (req, res) => {
     const newPlayer = new Player(req.body)
-    Game.findByID(req.params.gameId)
+    Game.findById(req.params.gameId)
         .then((game) => {
             game.players.push(newPlayer)
             return game.save()
