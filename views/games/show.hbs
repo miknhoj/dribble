@@ -5,6 +5,9 @@
 <div> Game #: {{game.gameNumber}}</div>
 <div> Players: </div>
 
+<form action='/games/{{game._id}}?_method=DELETE' method='POST'>
+    <input type='submit' value='Delete Game'>
+</form>
 <div>
 <a href='/games/{{game._id}}/edit'>Edit Game</a>
 </div>

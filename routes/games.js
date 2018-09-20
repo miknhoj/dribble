@@ -48,6 +48,11 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE
-
+router.delete('/:id', (req, res) => {
+  Game.findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.redirect('/games')
+    })
+})
 
 module.exports = router;
