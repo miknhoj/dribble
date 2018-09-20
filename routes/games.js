@@ -12,6 +12,9 @@ router.get('/', (req, res) => {
 
 
 // NEW, RENDER NEW FORM
+router.get('/new', (req,res) => {
+  res.render('games/new')
+})
 
 // SHOW, SHOW ONE
 router.get('/:id', (req, res) => {
