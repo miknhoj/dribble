@@ -3,7 +3,8 @@
 <div> Date: {{game.date}}</div>
 <div> Location: {{game.location}}</div>
 <div> Game #: {{game.gameNumber}}</div>
-<div> Players: </div>
+{{!-- <div> Players: {{game.players.name}}</div> --}}
+<div><a href='/games/{{game._id}}/players'>Players</a></div>
 
 <form action='/games/{{game._id}}?_method=DELETE' method='POST'>
     <input type='submit' value='Delete Game'>

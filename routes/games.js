@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { Game } = require('../db/schema')
+const { Game, Player } = require('../db/schema')
 
 // INDEX , SHOW ALL
 router.get('/', (req, res) => {
