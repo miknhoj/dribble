@@ -40,6 +40,12 @@ router.post('/', (req, res) => {
 })
 
 // UPDATE
+router.put('/:id', (req, res) => {
+  Game.findByIdAndUpdate(req.params.id, req.body)
+    .then((game) => {
+      res.redirect(`/games/${game._id}`)
+    })
+})
 
 // DELETE
 
