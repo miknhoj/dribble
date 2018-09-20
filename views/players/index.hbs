@@ -1,1 +1,10 @@
-Players Index Page
+
+<h1>All Players</h1>
+<div>
+    {{#each players}}
+    <a href='/games/{{this.id}}'>{{this.name}}</a>
+    {{/each}}
+</div>
+
+<a href='/players/new'>( + )</a>
+
