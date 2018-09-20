@@ -1,1 +1,16 @@
-Show One Player
+<h1>Show One Player</h1>
+
+<div> Date: {{game.date}}</div>
+<div> Name: {{player.name}}</div>
+<div> Stats: </div>
+
+<form action='/games/{{gameId}}/players/{{player._id}}?_method=DELETE' method='POST'>
+    <input type='submit' value='Delete Player'>
+</form>
+<div>
+<a href='/games/{{gameId}}/players/{{player._id}}/edit'>Edit Player</a>
+</div>
+<div>
+    <a href='/games/{{gameId}}/players'>Go Back</a>
+</div>
+

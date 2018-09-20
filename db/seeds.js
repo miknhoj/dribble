@@ -29,7 +29,7 @@ const gametest1 = new Game({
     date: '9 / 5 / 2018',
     location: 'KFPC',
     gameNumber: 1,
-    players: [playerOne]
+    players: [playerOne, playerTwo]
 })
 
 const gametest2 = new Game({
