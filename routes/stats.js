@@ -8,16 +8,11 @@ router.get('/', (req, res) => {
         .then((game) => {
             res.render('stats/index', {
             gameId: req.params.gameId,
+            playerId: game.players.id(req.params.playerId),
             stats: game.players.id(req.params.playerId).stats
         })
     })
 })
-
-// NEW, RENDER NEW FORM
-
-
-// SHOW, SHOW ONE
-
 
 // EDIT, RENDER EDIT FORM
 router.get('/edit', (req, res) => {
@@ -25,20 +20,11 @@ router.get('/edit', (req, res) => {
         .then((game) => {
             res.render('stats/edit', {
                 gameId: req.params.gameId,
-                stats: game.players.id(req.params.playerId).stats
+                playerId: game.players.id(req.params.playerId)
             })
         })
 })
 
-// CREATE
-
-
 // UPDATE
-
-
-
-// DELETE
-
-
 
 module.exports = router;
