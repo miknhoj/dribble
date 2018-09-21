@@ -1,1 +1,21 @@
-Stats Index Page
+<h1>Stats</h1>
+<div>
+    {{#each players}}
+    <a href='/games/{{../gameId}}/players/{{this._id}}'>{{this.name}}</a>
+    {{/each}}
+</div>
+
+<a href='/games/{{gameId}}/players/new'>( + )</a>
+
+<a href='/games/{{gameId}}/players/{{playerId}}'>Go Back</a>
+
+
+
+{{!-- <form action='/games/{{game._id}}/players/{{player._id}}/stats?_method=PUT' method='POST'>
+    <div>Points: <input type='text' name='date' value={{stats.points}}></div>
+    <div>Rebounds: <input type='text' name='location' value='{{stats.rebounds}}'></div>
+    <div>Assists: <input type='text' name='gameNumber' value='{{stats.assists}}'></div>
+    <div>Steals: <input type='text' name='gameNumber' value='{{stats.steals}}'></div>
+    <input type='submit' value='Update Stats'>
+</form>
+ --}}

@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
             res.render('stats/index', {
-            game
+            gameId: req.params.gameId,
+            playerId: req.params.playerId,
         })
     })
 })
