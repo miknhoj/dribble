@@ -2,13 +2,13 @@ var express = require('express');
 var router = express.Router({mergeParams: true});
 const { Game, Player, Stat } = require('../db/schema')
 
-// INDEX , SHOW ALL
+// INDEX , SHOW ALL/SHOW ONE
 router.get('/', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
             res.render('stats/index', {
-            gameId: req.params.gameId,
-            playerId: req.params.playerId,
+            game: req.params.gameId,
+            stats: game.players.id(req.params.playerId).stats
         })
     })
 })

@@ -1,11 +1,13 @@
 <h1>Stats</h1>
 <div>
-    {{#each players}}
-    <a href='/games/{{../gameId}}/players/{{this._id}}'>{{this.name}}</a>
-    {{/each}}
+
+        <div>Points: {{stats.points}}</div>
+        <div>Rebounds: </div>
+        <div>Assists: </div>
+        <div>Steals: </div>
+
 </div>
 
-<a href='/games/{{gameId}}/players/new'>( + )</a>
 
 <a href='/games/{{gameId}}/players/{{playerId}}'>Go Back</a>
 

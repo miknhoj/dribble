@@ -9,7 +9,7 @@ const Schema = require('./schema')
 const { Game, Player, Stat } = Schema
 
 const gamestat = new Stat({
-    points: 0,
+    points: 1980,
     rebounds: 0,
     assists: 0,
     steals: 0,
@@ -17,12 +17,12 @@ const gamestat = new Stat({
 
 const playerOne = new Player({
     name: 'Mike',
-    stats: [gamestat],
+    stats: gamestat,
 })
 
 const playerTwo = new Player({
-    name: 'Bron',
-    stats: [gamestat],
+    name: 'Bron', 
+    stats: gamestat,
 })
 
 const gametest1 = new Game({
