@@ -19,7 +19,8 @@ router.get('/new', (req,res) => {
 router.get('/:id', (req, res) => {
   Game.findById(req.params.id)
     .then((game) => {
-      res.render('games/show', { game })
+      const players = game.players
+      res.render('games/show', { game, players })
     })
 })
 

@@ -1,6 +1,6 @@
 <h1>Edit Player</h1>
 
-<form action='/games/{{games.Id}}/players/{{players._id}}?_method=PUT' method='POST'>
+<form action='/games/{{gameId}}/players/{{player._id}}?_method=PUT' method='POST'>
     <div>Name: <input type='text' name='name' value={{player.name}}></div>
-    <input type='submit' value='Update Game'>
+    <input type='submit' value='Update Player'>
 </form>
