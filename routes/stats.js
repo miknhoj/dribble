@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
             res.render('stats/index', {
-            game: req.params.gameId,
+            gameId: req.params.gameId,
             stats: game.players.id(req.params.playerId).stats
         })
     })
@@ -20,7 +20,15 @@ router.get('/', (req, res) => {
 
 
 // EDIT, RENDER EDIT FORM
-
+router.get('/edit', (req, res) => {
+    Game.findById(req.params.gameId)
+        .then((game) => {
+            res.render('stats/edit', {
+                gameId: req.params.gameId,
+                stats: game.players.id(req.params.playerId).stats
+            })
+        })
+})
 
 // CREATE
 

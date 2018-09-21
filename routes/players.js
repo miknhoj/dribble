@@ -79,9 +79,8 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) =>{
-            console.log("GAME:", game)
-                game.players.id(req.params.id).remove()
-                return game.save()
+            game.players.id(req.params.id).remove()
+            return game.save()
         })
         .then(() => {
            res.redirect(`/games/${req.params.gameId}/players`) 
