@@ -8,21 +8,29 @@ mongoose.connect(process.env.MONGODB_URI, {
 const Schema = require('./schema')
 const { Game, Player, Stat } = Schema
 
-const gamestat = new Stat({
-    points: 1980,
-    rebounds: 0,
-    assists: 0,
-    steals: 0,
+const gamestat1 = new Stat({
+    points: 200,
+    rebounds: 100,
+    assists: 100,
+    steals: 30,
 })
+
+const gamestat2 = new Stat({
+    points: 150,
+    rebounds: 150,
+    assists: 150,
+    steals: 40,
+})
+
 
 const playerOne = new Player({
     name: 'Mike',
-    stats: gamestat,
+    stats: gamestat1,
 })
 
 const playerTwo = new Player({
     name: 'Bron', 
-    stats: gamestat,
+    stats: gamestat2,
 })
 
 const gametest1 = new Game({
