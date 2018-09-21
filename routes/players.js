@@ -39,6 +39,15 @@ router.get('/:id', (req, res) => {
 })
 
 // EDIT, RENDER EDIT FORM
+router.get('/:id/edit', (req, res) => {
+    Game.findById(req.params.gameId)
+        .then((game) => {
+            res.render('players/edit', {
+                gameId: req.params.gameId,
+                player: game.players.id(req.params.id)
+            }) 
+        })
+})
 
 // CREATE
 router.post('/', (req, res) => {
