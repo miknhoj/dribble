@@ -25,6 +25,22 @@ router.get('/edit', (req, res) => {
         })
 })
 
+//CREATE
+// router.post('/', (req, res) => {
+    
+    
+})
+
 // UPDATE
+// router.put('/:id', (req, res) => {
+//     Game.findById(req.params.gameId)
+//         .then((game) => {
+//             game.players.id(req.params.id).stats.set(req.body)
+//             return game.save()
+//         })
+//         .then((game) => {
+//             res.redirect(`/games/${req.params.gameId}/players/${req.params.id}.stats`)
+//         })
+// })
 
 module.exports = router;
