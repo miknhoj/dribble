@@ -1,12 +1,10 @@
-
 <h1>All Players</h1>
 <div>
     {{#each players}}
     <div><a href='/games/{{../gameId}}/players/{{this._id}}'>{{this.name}}</a></div>
     {{/each}}
 </div>
+<div><a class = "links" href='/games/{{gameId}}/players/new'>( + Add New Player)</a></div>
 
-<a href='/games/{{gameId}}/players/new'>( + )</a>
 
-<a href='/games/{{gameId}}'>Go Back</a>
-
+<div><a class = "links" href='/games/{{gameId}}'>Go Back</a></div>
