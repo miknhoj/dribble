@@ -20,7 +20,7 @@ router.get('/edit', (req, res) => {
         .then((game) => {
             res.render('stats/edit', {
                 gameId: req.params.gameId,
-                playerId: game.players.id(req.params.playerId)
+                playerId: game.players.id(req.params.playerId),
             })
         })
 })
@@ -32,15 +32,15 @@ router.get('/edit', (req, res) => {
 // })
 
 // UPDATE
-// router.put('/:id', (req, res) => {
-//     Game.findById(req.params.gameId)
-//         .then((game) => {
-//             game.players.id(req.params.id).stats.set(req.body)
-//             return game.save()
-//         })
-//         .then((game) => {
-//             res.redirect(`/games/${req.params.gameId}/players/${req.params.id}.stats`)
-//         })
-// })
+router.put('/:id', (req, res) => {
+    Game.findById(req.params.gameId)
+        .then((game) => {
+            game.players.id(req.params.playerId).stats.set(req.body)
+            return game.save()
+        })
+        .then((game) => {
+            res.redirect(`/games/${req.params.gameId}/players/${req.params.id}.stats`)
+        })
+})
 
 module.exports = router;

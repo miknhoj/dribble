@@ -10,12 +10,14 @@
 </div> --}}
 <div><a href='/games/{{game._id}}/players'>Players</a></div>
 
-<form action='/games/{{game._id}}?_method=DELETE' method='POST'>
-    <input type='submit' value='Delete Game'>
-</form>
 <div>
-<a href='/games/{{game._id}}/edit'>Edit Game</a>
+    <a href='/games/{{game._id}}/edit'>Edit Game</a>
 </div>
+
 <div>
     <a href='/games'>Go Back</a>
 </div>
+
+<form action='/games/{{game._id}}?_method=DELETE' method='POST'>
+    <input type='submit' value='Delete Game'>
+</form>
