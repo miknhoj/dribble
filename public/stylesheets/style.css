@@ -1,12 +1,27 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /* background-image: url('/images/3_7.jpg');
+  background-image: url('/images/3_7.jpg');
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: 'Monoton', cursive;
 
 }
 
+.pre {
+  font-size: 30px;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.welcome {
+  font-size: 100px;
+  font-family: 'Monoton', cursive;
+  margin-top: 0px;
+  border-top: 0px;
+  padding-top: 0px;
+  
+}
 
 a {
   color: #00B7FF;
