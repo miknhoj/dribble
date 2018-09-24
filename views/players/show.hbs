@@ -3,17 +3,20 @@
 <div> Name: {{player.name}}</div>
 <div> Position: {{player.position}}</div>
 <div>
-<a class="links" href='/games/{{gameId}}/players/{{player._id}}/stats'>Stats</a>
+<a class="links" href='/games/{{game._id}}/players/{{player._id}}/stats'>Stats</a>
 </div>
 
+{{!-- EDIT --}}
 <div>
-<a class="links" href='/games/{{gameId}}/players/{{player._id}}/edit'>Edit Player</a>
-</div>
-<div>
-    <a class="links" href='/games/{{gameId}}/players'>Go Back</a>
+<a class="links" href='/games/{{game._id}}/players/{{player._id}}/edit'>Edit Player</a>
 </div>
 
-<form action='/games/{{gameId}}/players/{{player._id}}?_method=DELETE' method='POST'>
+{{!-- GO BACK --}}
+<div>
+    <a class="links" href='/games/{{game._id}}/players'>Go Back</a>
+</div>
+
+<form action='/games/{{game._id}}/players/{{player._id}}?_method=DELETE' method='POST'>
     <input type='submit' value='Delete Player'>
 </form>
 

@@ -33,8 +33,8 @@ router.put('/:id', (req, res) => {
             game.players.id(req.params.playerId).stats.set(req.body)
             return game.save()
         })
-        .then((game) => {
-            res.redirect(`/games/${req.params.gameId}/players/${req.params.playerId}.stats`)
+        .then(() => {
+            res.redirect(`/games/${req.params.gameId}/players/${req.params.playerId}/stats`)
         })
 })
 
