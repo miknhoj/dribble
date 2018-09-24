@@ -3,7 +3,6 @@
 <form action='/games/{{game._id}}?_method=PUT' method='POST'>
     <div>Date: <input type='text' name='date' value={{game.date}}></div>
     <div>Location: <input type='text' name='location' value='{{game.location}}'></div>
-    <div>Game #: <input type='text' name='gameNumber' value='{{game.gameNumber}}'></div>
     {{!-- <div>Players: <input type='text' name='players' value='{{game.players}'></div> --}}
     <input type='submit' value='Update Game'>
 </form>
