@@ -7,9 +7,9 @@ router.get('/', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
           res.render('players/index', {
-            game: game,
+            game,
             player: game.players.id(req.params.playerId),
-            players: game.players
+            players: game.players,
             })
         })
         .catch(error=> {
@@ -23,8 +23,7 @@ router.get('/new', (req, res) => {
         .then((game) => {
             res.render('players/new', {
                 game,
-                player: game.players.id(req.params.playerId),
-                players: game.players
+                player: game.players.id(req.params.id),
         })
     })
 })
@@ -35,7 +34,7 @@ router.get('/:id', (req, res) => {
         .then((game) => {
             res.render('players/show', {
                 game,
-                player: game.players.id(req.params.playerId)
+                player: game.players.id(req.params.id),
             })
         })
 })
@@ -68,7 +67,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
-            game.players.id(req.params.playerId).set(req.body)
+            game.players.id(req.params.id).set(req.body)
             return game.save()
         })
         .then((game) => {
