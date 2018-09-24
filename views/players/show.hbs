@@ -2,16 +2,17 @@
 
 <div> Name: {{player.name}}</div>
 <div>
-<a href='/games/{{gameId}}/players/{{player._id}}/stats'>Stats</a>
+<a class="links" href='/games/{{gameId}}/players/{{player._id}}/stats'>Stats</a>
+</div>
+
+<div>
+<a class="links" href='/games/{{gameId}}/players/{{player._id}}/edit'>Edit Player</a>
+</div>
+<div>
+    <a class="links" href='/games/{{gameId}}/players'>Go Back</a>
 </div>
 
 <form action='/games/{{gameId}}/players/{{player._id}}?_method=DELETE' method='POST'>
     <input type='submit' value='Delete Player'>
 </form>
-<div>
-<a href='/games/{{gameId}}/players/{{player._id}}/edit'>Edit Player</a>
-</div>
-<div>
-    <a href='/games/{{gameId}}/players'>Go Back</a>
-</div>
 

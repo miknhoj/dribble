@@ -9,17 +9,17 @@ const Schema = require('./schema')
 const { Game, Player, Stat } = Schema
 
 const gamestat1 = new Stat({
-    points: 200,
-    rebounds: 100,
-    assists: 100,
-    steals: 30,
+    points: 20,
+    rebounds: 10,
+    assists: 10,
+    steals: 3,
 })
 
 const gamestat2 = new Stat({
-    points: 150,
-    rebounds: 150,
-    assists: 150,
-    steals: 40,
+    points: 15,
+    rebounds: 15,
+    assists: 15,
+    steals: 4,
 })
 
 
@@ -36,14 +36,12 @@ const playerTwo = new Player({
 const gametest1 = new Game({
     date: '9 / 5 / 2018',
     location: 'KFPC',
-    gameNumber: 1,
     players: [playerOne, playerTwo]
 })
 
 const gametest2 = new Game({
     date: '10/ 11 / 2018',
     location: 'KFPC',
-    gameNumber: 1,
     players: [playerTwo]
 })
 

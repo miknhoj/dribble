@@ -7,14 +7,14 @@
     <a href='/games/{{../gameId}}/players/{{this._id}}'>{{this.name}}</a>
     {{/each}}
 </div> --}}
-<div><a href='/games/{{game._id}}/players'>Players</a></div>
+<div><a class="links" href='/games/{{game._id}}/players'>Players</a></div>
 
 <div>
-    <a href='/games/{{game._id}}/edit'>Edit Game</a>
+    <a class="links" href='/games/{{game._id}}/edit'>Edit Game</a>
 </div>
 
 <div>
-    <a href='/games'>Go Back</a>
+    <a class="links" href='/games'>Go Back</a>
 </div>
 
 <form action='/games/{{game._id}}?_method=DELETE' method='POST'>
