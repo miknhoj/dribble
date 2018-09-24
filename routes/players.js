@@ -45,7 +45,7 @@ router.get('/:id/edit', (req, res) => {
         .then((game) => {
             res.render('players/edit', {
                 game,
-                player: game.players.id(req.params.playerId)
+                player: game.players.id(req.params.id)
             }) 
         })
 })
@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
             return game.save()
         })
         .then((game) => {
-            res.redirect(`/games/${req.params.gameId}/players/${req.params.playerId}`)
+            res.redirect(`/games/${req.params.gameId}/players/${req.params.id}`)
         })
 })
 

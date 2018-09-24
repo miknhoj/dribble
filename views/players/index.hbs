@@ -2,7 +2,6 @@
 <div>
     {{#each players}}
     <div><a href='/games/{{../game._id}}/players/{{this._id}}'>{{this.name}}</a></div>
-    <div><a href='/games/{{../game._id}}/players/{{this._id}}'>{{this.position}}</a></div>
     {{/each}}
 </div>
 <div><a class = "links" href='/games/{{game._id}}/players/new'>( + Add New Player)</a></div>

@@ -1,7 +1,7 @@
 <div class = "title">Edit Player</div>
 
 <form action='/games/{{game._id}}/players/{{player._id}}?_method=PUT' method='POST'>
-    <div>Name: <input type='text' name='name' value={{game.player.name}}></div>
-    <div>Position: <input type='text' name='position' value={{game.player.position}}></div>
+    <div>Name: <input type='text' name='name' value={{player.name}}></div>
+    <div>Position: <input type='text' name='position' value={{player.position}}></div>
     <input type='submit' value='Update Player'>
 </form>
