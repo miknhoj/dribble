@@ -1,9 +1,9 @@
-<h1>Edit Stats</h1>
+<div class = "title">Edit Stats</div>
 
-<form action='/games/{{gameId}}/players/{{playerId}}/stats?_method=PUT' method='POST'>
-    <div>Points: <input type='text' name='date' value={{stats.points}}></div>
-    <div>Rebounds: <input type='text' name='location' value='{{stats.rebounds}}'></div>
-    <div>Assists: <input type='text' name='gameNumber' value='{{stats.assists}}'></div>
-    <div>Steals: <input type='text' name='gameNumber' value='{{stats.steals}}'></div>
+<form action='/games/{{gameId}}/players/{{player._id}}/stats?_method=PUT' method='POST'>
+    <div>Points: <input type='text' name='points' value={{stats.points}}></div>
+    <div>Rebounds: <input type='text' name='rebounds' value='{{stats.rebounds}}'></div>
+    <div>Assists: <input type='text' name='assists' value='{{stats.assists}}'></div>
+    <div>Steals: <input type='text' name='steals' value='{{stats.steals}}'></div>
     <input type='submit' value='Update Stats'>
 </form>

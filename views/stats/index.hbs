@@ -1,12 +1,12 @@
 <div class = "title">Stats</div>
 <div>
 
-        <div>Points: {{stats.points}}</div>
-        <div>Rebounds: {{stats.rebounds}}</div>
-        <div>Assists: {{stats.assists}}</div>
-        <div>Steals: {{stats.steals}}</div>
+        <div>Points: {{player.stats.points}}</div>
+        <div>Rebounds: {{player.stats.rebounds}}</div>
+        <div>Assists: {{player.stats.assists}}</div>
+        <div>Steals: {{player.stats.steals}}</div>
 
 </div>
 
-<div><a class="links" href='/games/{{gameId}}/players/{{playerId}}/stats/edit'>Edit Stats</a></div>
-<div><a class="links" href='/games/{{gameId}}/players/{{player._id}}'>Go Back</a></div>
+<div><a class="links" href='/games/{{game._id}}/players/{{player._id}}/stats/edit'>Edit Stats</a></div>
+<div><a class="links" href='/games/{{game._id}}/players/{{player._id}}'>Go Back</a></div>
