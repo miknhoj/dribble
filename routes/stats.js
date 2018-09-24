@@ -22,6 +22,7 @@ router.get('/edit', (req, res) => {
             res.render('stats/edit', {
                 game,
                 player: game.players.id(req.params.playerId),
+                stats: game.players.id(req.params.playerId).stats
             })
         })
 })
@@ -30,6 +31,7 @@ router.get('/edit', (req, res) => {
 router.put('/:id', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
+            // const statId = game.players.id(req.params.playerId).stats._id
             game.players.id(req.params.playerId).stats.set(req.body)
             return game.save()
         })

@@ -1,6 +1,6 @@
 <div class = "title">Edit Stats</div>
 
-<form action='/games/{{game._id}}/players/{{player._id}}/stats?_method=PUT' method='POST'>
+<form action='/games/{{game._id}}/players/{{player._id}}/stats/{{stats._id}}?_method=PUT' method='POST'>
     <div>Points: <input type='text' name='points' value={{player.stats.points}}></div>
     <div>Rebounds: <input type='text' name='rebounds' value='{{player.stats.rebounds}}'></div>
     <div>Assists: <input type='text' name='assists' value='{{player.stats.assists}}'></div>
