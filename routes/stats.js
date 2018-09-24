@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
         })
 })
 
+
 // EDIT, RENDER EDIT FORM
 router.get('/edit', (req, res) => {
     Game.findById(req.params.gameId)
@@ -27,11 +28,12 @@ router.get('/edit', (req, res) => {
         })
 })
 
+// CREATE
+
 // UPDATE
 router.put('/:id', (req, res) => {
     Game.findById(req.params.gameId)
         .then((game) => {
-            // const statId = game.players.id(req.params.playerId).stats._id
             game.players.id(req.params.playerId).stats.set(req.body)
             return game.save()
         })
