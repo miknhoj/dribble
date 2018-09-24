@@ -25,12 +25,6 @@ router.get('/edit', (req, res) => {
         })
 })
 
-//CREATE
-// router.post('/', (req, res) => {
-    
-    
-// })
-
 // UPDATE
 router.put('/:id', (req, res) => {
     Game.findById(req.params.gameId)

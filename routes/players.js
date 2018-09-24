@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
         .then((game) => {
           res.render('players/index', {
             gameId: req.params.gameId,
+            playerId: req.params.playerId,
             players: game.players
             })
         })
