@@ -25,11 +25,13 @@ const gamestat2 = new Stat({
 
 const playerOne = new Player({
     name: 'Mike',
+    position: 'Forward',
     stats: gamestat1,
 })
 
 const playerTwo = new Player({
     name: 'Bron', 
+    position: 'Power Foward',
     stats: gamestat2,
 })
 

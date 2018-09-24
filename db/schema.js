@@ -10,6 +10,7 @@ const StatSchema = new Schema ({
 
 const PlayerSchema = new Schema ({
     name: String,
+    position: String,
     stats: StatSchema,
 })
 
