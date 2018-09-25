@@ -8,12 +8,6 @@ const StatSchema = new Schema ({
     steals: Number,
 })
 
-// const PlayerSchema = new Schema ({
-//     name: String,
-//     position: String,
-//     stats: StatSchema,
-// })
-
 const PlayerSchema = new Schema ({
     name: String,
     position: String,
