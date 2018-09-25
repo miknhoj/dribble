@@ -44,6 +44,11 @@ div{
   color:black;
 }
 
+.stats {
+  text-align: right;
+  max-width: 66%;
+}
+
 a {
   font-size: 25px;
   color: black;
@@ -114,6 +119,11 @@ div{
 .start {
   font-size: 50px;
   color:black;
+}
+
+.stats {
+  text-align: right;
+  max-width: 60%;
 }
 
 a {
