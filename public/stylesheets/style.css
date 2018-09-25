@@ -18,7 +18,7 @@ body {
 }
 
 .welcome {
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: 'Monoton', cursive;
   margin-top: -30px;
   border-top: 0px;
@@ -27,7 +27,7 @@ body {
 }
 
 div{
-  font-size: 30px;
+  font-size: 1rem;
 }
 
 .title {
@@ -36,7 +36,7 @@ div{
 }
 
 .subtitle {
-  font-size: 45px;
+  font-size: 2rem;
 }
 
 .start {
@@ -67,14 +67,21 @@ input {
 }
 
 @media (min-width: 800px) {
-body {
-  /* background-image: url('/images/3_7.jpg'); */
-  background-size: cover;
+html {
+  background-image: url('/images/3_7.jpg');
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+
+}
+  
+body {
+  background-color: transparent;
   text-align: center;
   font-family: 'Monoton', cursive;
   padding: 50px;
-
 }
 
 .pre {
