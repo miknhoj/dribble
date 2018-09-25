@@ -58,4 +58,11 @@ input {
 }
 
 
-
+@media screen and (max-width: 375px) {
+  body {
+    background-color: #F17F29;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    padding: 50px;
+  }
+}
