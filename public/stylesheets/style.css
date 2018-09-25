@@ -2,7 +2,7 @@ body {
   background-color: #F17F29;
   text-align: center;
   font-family: 'Monoton', cursive;
-  /* padding: 50px; */
+  padding-top: 50px;
 }
 
 .container {
@@ -18,16 +18,18 @@ body {
 }
 
 .welcome {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: 'Monoton', cursive;
-  margin-top: -30px;
+  margin-top: -45px;
   border-top: 0px;
   padding-top: 0px;
   max-width: 100%;
+  text-align: center;
 }
 
 div{
   font-size: 1rem;
+  margin: 1rem;
 }
 
 .title {
@@ -40,17 +42,12 @@ div{
 }
 
 .start {
-  font-size: 50px;
+  font-size: 4rem;
   color:black;
 }
 
-.stats {
-  text-align: right;
-  max-width: 66%;
-}
-
 a {
-  font-size: 25px;
+  font-size: 1rem;
   color: black;
 }
 
@@ -63,12 +60,76 @@ a:hover, links:hover {
 }
 
 input {
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 }
 
 @media (min-width: 600px) {
-
+  html {
+    background-image: url('/images/3_7.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+  
+  }
+    
+  body {
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+    padding: 50px;
+  }
+  
+  .pre {
+    font-size: 30px;
+    margin-top: 100px;
+    border-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .welcome {
+    font-size: 100px;
+    font-family: 'Monoton', cursive;
+    margin-top: -50px;
+    border-top: 0px;
+    padding-top: 0px;
+  }
+  
+  div{
+    font-size: 30px;
+  }
+  
+  .title {
+    font-size: 70px;
+  }
+  
+  .subtitle {
+    font-size: 45px;
+  }
+  
+  .start {
+    font-size: 50px;
+    color:black;
+  }
+  
+  a {
+    font-size: 25px;
+    color: black;
+  }
+  
+  .links {
+    color: #59F8E8;
+  }
+  
+  a:hover, links:hover {
+    color: #9CFC97;
+  }
+  
+  input {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -121,11 +182,6 @@ div{
   color:black;
 }
 
-.stats {
-  text-align: right;
-  max-width: 60%;
-}
-
 a {
   font-size: 25px;
   color: black;
@@ -143,4 +199,3 @@ input {
   font-size: 20px;
 }
 }
-

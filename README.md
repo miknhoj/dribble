@@ -30,7 +30,10 @@ For me, the hardest part was coming up with an idea. I wasn't in love with this 
 
 ## Final Thoughts
 
+Getting help after being stuck on an issue after awhile, talking through the code with classmates, and not letting frustration deter me from 
+
 There's a couple things I wished I could've gotten to. 
 * For the adding a Game page - I would've liked to add a calender that the user can see and select the date for the game. 
-* Adding more styles to make the app look a more modern and up to date
+* Adding more styles to make the app look a more modern and user-inviting (maybe some images, more colors, more design)
+* Consolidate the stats data into a table
 
