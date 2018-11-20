@@ -11,7 +11,7 @@ Dribble is a not so serious, just for fun, application that allows you to track 
 * [Wire Frame](https://www.figma.com/file/YLVMJTYhGOHsSUxQCW0YFjOA/Unit-2-Project---Wireframe?node-id=0%3A1)
 * Data Modal
 
-![Alt text](https://imgur.com/iaDIu8H)
+![Alt text](https://i.imgur.com/iaDIu8H.png)
 
 ---
 ## The Process
